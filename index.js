@@ -1,14 +1,19 @@
-const express = require('express'); // import express
+import express from 'express'; // import express
+import logger from 'morgan';
+
+
+
 const app = express(); // initialize express
 
+app.use(logger('dev'));
 
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
     res.status(200).send({
         message: 'Hello World!'
     });
 });
 
-// server our frontend 
+// serve our frontend 
 app.use(express.static(__dirname + '/public'));
 
 // setup server && port
