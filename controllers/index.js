@@ -1,6 +1,9 @@
 import data from '../data/data';
 
 class Controller {
+    static Allweather(req, res) {
+        return res.status(200).send(data);
+    }
 
     static weather(req, res) {
         const cityName = req.query.city.toLowerCase(); //
@@ -18,7 +21,7 @@ class Controller {
         }
         res.status(400).send({
             status: 'error',
-            message: 'This city does not exit'
+            message: 'This city does not exit in our database'
         });
     }
 
