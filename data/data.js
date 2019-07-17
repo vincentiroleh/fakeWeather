@@ -24,7 +24,7 @@ const fakeWeatherData = [{
         'temperature (F)': '66 F',
     },
     {
-        'city': 'Lagos ',
+        'city': 'lagos',
         'temperature (C)': '24 C',
         'temperature (F)': '75 F',
     },

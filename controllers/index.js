@@ -1,15 +1,10 @@
 import data from '../data/data';
-
 class Controller {
-    static Allweather(req, res) {
-        return res.status(200).send(data);
-    }
-
     static weather(req, res) {
-        const cityName = req.query.city.toLowerCase(); //
+        const cityName = req.query.city.toLowerCase(); // get city name and covert it top a lowercase
 
+        // loop through our data and set conditions
         for (let i = 0; i < data.length; i++) {
-
             if (!cityName) {
                 return res.status(400).send({
                     status: 'error',
@@ -24,9 +19,6 @@ class Controller {
             message: 'This city does not exit in our database'
         });
     }
-
-
-
 }
 
 export default Controller;
