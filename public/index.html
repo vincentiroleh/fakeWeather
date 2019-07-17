@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fake Weather App</title>
+    <title>Fake Weather API</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>Get Weather Info</h1>
+
+    <main>
+        <!-- Search my city name -->
+        <section>
+            <h2>Get Weather info by city</h2>
+            <form>
+                <div class="form-item">
+                    <label for="city">Name of City:</label>
+                    <input type="text" placeholder="Enter name of the city" id="city" name="city" required>
+                    <button class="searchBtn" type="submit">SEARCH</button>
+                </div>
+            </form>
+            <!-- display error message here -->
+            <div class="errorMessage"></div>
+
+            <!-- display weather info here -->
+            <div class="weather-info">
+                <h3 class="cityName"></h3>
+                <h4 class="celsius"></h4>
+                <h4 class="fahrenheit"></h4>
+            </div>
+        </section>
+    </main>
     
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
